@@ -8,17 +8,13 @@ function generateNum() {
   return num;
 }
 
-function checkWin(i, name) {
-  if (i === 3) {
-    console.log(`Congratulations, ${name}!`);
-  }
-}
-
 function answerCheck(i, answer, isEven, name) {
   let count = i;
   if (answer.toLowerCase() === isEven) {
     console.log('Correct!');
-    checkWin(i, name);
+    if (count === 3) {
+      console.log(`Congratulations, ${name}!`);
+    }
     count += 1;
     return count;
   }
