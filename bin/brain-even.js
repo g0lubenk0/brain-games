@@ -8,6 +8,12 @@ function generateNum() {
   return num;
 }
 
+function checkWin(i, name) {
+  if (i === 3) {
+    console.log(`Congratulations, ${name}!`);
+  }
+}
+
 const brainEven = () => {
   const name = sayHello();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -21,12 +27,10 @@ const brainEven = () => {
     if (answer.toLowerCase() === isEven) {
       console.log('Correct!');
       i += 1;
+      checkWin(i, name);
     } else {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${isEven}.\nLet's try again, ${name}!`);
       i = 0;
-    }
-    if (i === 3) {
-      console.log(`Congratulations, ${name}!`);
     }
   }
 };
