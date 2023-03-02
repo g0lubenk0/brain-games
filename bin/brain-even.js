@@ -21,12 +21,12 @@ const brainEven = () => {
     if (answer.toLowerCase() === isEven) {
       console.log('Correct!');
       i += 1;
-      if (i === 3) {
-        console.log(`Congratulations, ${name}!`);
-      }
     } else {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${isEven}.\nLet's try again, ${name}!`);
       i = 0;
+    }
+    if (i === 3) {
+      console.log(`Congratulations, ${name}!`);
     }
   }
 };
