@@ -22,7 +22,7 @@ function answerCheck(i, answer, question, name) {
     return count;
   }
   console.log(`${answer} is wrong answer ;(. Correct answer was ${question}.\nLet's try again, ${name}!`);
-  count = 0;
+  count = 4;
   return count;
 }
 
