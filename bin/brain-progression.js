@@ -42,7 +42,7 @@ const brainProgression = () => {
   let i = 0;
   while (i < 3) {
     const [progression, result] = hideRandom(generateProgression());
-    const question = `${progression}`;
+    const question = `${progression.join(' ')}`;
     const answer = readlineSync.question(`Question: ${question}\n`);
 
     i = answerCheck(i, answer, String(result), name);
