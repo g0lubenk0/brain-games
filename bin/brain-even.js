@@ -10,7 +10,7 @@ const brainEven = () => {
 
   let i = 0;
   while (i < 3) {
-    const number = generateNum();
+    const number = generateNum(10, 50);
     const isEven = number % 2 === 0 ? 'yes' : 'no';
     const answer = readlineSync.question(`Question: ${number}\n`);
 

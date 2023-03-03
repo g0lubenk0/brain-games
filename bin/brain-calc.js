@@ -7,7 +7,7 @@ import { generateNum, generateNumCondition, answerCheck } from '../src/index.js'
 function randomOperation() {
   const max = 4;
   const min = 0;
-  const randomNum = Math.ceil(Math.random() * (max - min) + min);
+  const randomNum = generateNum(max, min);
   let result = 0;
   if (randomNum === 1) {
     result = '*';
@@ -44,9 +44,9 @@ const brainCalc = () => {
 
   let i = 0;
   while (i < 3) {
-    const number1 = generateNum();
+    const number1 = generateNum(10, 30);
     const operation = randomOperation();
-    const number2 = generateNumCondition(number1, operation);
+    const number2 = generateNumCondition(10, 30, number1, operation);
     const question = `${number1} ${operation} ${number2}`;
     const result = String(getResult(number1, number2, operation));
     const answer = readlineSync.question(`Question: ${question}\n`);

@@ -29,8 +29,8 @@ const brainEven = () => {
 
   let i = 0;
   while (i < 3) {
-    const number1 = generateNum();
-    const number2 = generateNum();
+    const number1 = generateNum(10, 50);
+    const number2 = generateNum(10, 50);
     const question = `${number1} ${number2}`;
     const result = String(findGCD(number1, number2, question));
     const answer = readlineSync.question(`Question: ${question}\n`);

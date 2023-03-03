@@ -1,12 +1,12 @@
-function generateNum() {
-  const num = Math.ceil(Math.random() * 100 + Math.random() * 10);
+function generateNum(min, max) {
+  const num = Math.ceil(Math.random() * (max - min) + min);
   return num;
 }
 
-function generateNumCondition(a, operation) {
-  let num = Math.ceil(Math.random() * 100 + Math.random() * 10);
+function generateNumCondition(min, max, a, operation) {
+  let num = Math.ceil(Math.random() * (max - min) + min);
   while (num > a && operation === '-') {
-    num = Math.ceil(Math.random() * 100 + Math.random() * 10);
+    num = Math.ceil(Math.random() * (max - min) + min);
   }
   return num;
 }
