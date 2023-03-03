@@ -37,7 +37,7 @@ function hideRandom(progression) {
 
 const brainProgression = () => {
   const name = sayHello();
-  console.log('Find the greatest common divisor of given numbers.');
+  console.log('What number is missing in the progression?');
 
   let i = 0;
   while (i < 3) {
